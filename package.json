@@ -1,0 +1,61 @@
+{
+  "name": "corti_flow",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "5.17.0",
+    "@testing-library/react": "13.4.0",
+    "@testing-library/user-event": "13.5.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "2.1.4"
+  },
+  "scripts": {
+    "lint": "eslint src/app",
+    "lint:fix": "npm run lint -- --fix",
+    "start": "bin/start.sh",
+    "dev": "bin/dev.sh",
+    "build": "bin/build.sh",
+    "build:des": "bin/build.sh des",
+    "build:pre": "bin/build.sh pre",
+    "build:pro": "bin/build.sh pro",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prepare": "npx husky install"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "lint-staged": {
+    "src/app/**/*{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "7.21.11",
+    "@commitlint/cli": "18.4.4",
+    "@commitlint/config-conventional": "18.4.4",
+    "concurrently": "8.2.2",
+    "env-cmd": "10.1.0",
+    "eslint": "8.56.0",
+    "husky": "8.0.3",
+    "lint-staged": "15.2.0"
+  }
+}
